@@ -1,0 +1,137 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK Insulin UX
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/level-one",
+      text: "Home"
+    }
+  ],
+  href: "/level-one/level-two/level-three",
+  text: "Medicines A to Z"
+}) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1>
+        Insulin
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">for diabetes</span>
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p class="nhsuk-lede-text">Insulin is a hormone that helps your body use glucose (sugar) for energy.</p>
+      <p class="nhsuk-lede-text">It’s used as a medicine to treat diabetes, including <a href="">type 1 diabetes</a>, <a href="">type 2 diabetes</a> and <a href="">gestational diabetes</a>. It’s available on prescription.</p>
+
+      <!--<section>
+        <h2>Taking insulin</h2>
+          <p>You inject insulin using an insulin pen. This is a device that helps you inject safely and take the right dose. The type of pen you use depends on which insulin you’re prescribed.</p>
+          <p>Using an insulin pen does not usually hurt. The needles are very small, as you only inject a small amount just under your skin. When you’re first prescribed insulin you’ll be shown where to inject and how to use your pen.</p>
+          <p>Some people use an insulin pump instead of injections. This is a device you attach to your body that gives you small amounts of insulin throughout the day and night. Pumps are recommended for some children and adults with type 1 diabetes.</p>
+          <p>The type of insulin you take and the amount you need depends on your condition and how your body responds to insulin and carbohydrates.</p>
+          <p>Insulin can sometimes cause low blood sugar (hypoglycaemia, or hypos). You’ll be told how to recognise the symptoms and treat hypos.</p>
+      </section>
+
+      <section>
+        <h2>Types of insulin</h2>
+        <p>There are several different types of insulin, and different brand names. </p>
+        <p>Some start to work quickly and last a few hours. They’re taken before meals, to stop your blood glucose going too high when you eat carbohydrates. They’re known as rapid acting, short acting, mealtime or bolus insulin.</p>
+        <p>Others work more slowly and last for longer. They’re taken once or twice a day to give you the background insulin your body needs throughout the day. They’re known as long acting, intermediate acting, background or basal insulin. </p>
+        <p>You might need to take more than one type of insulin at different times to keep your blood glucose within a healthy range. Your doctor will advise on what insulin treatment is best for you.</p>
+
+      </section> -->
+      <section>
+        <!--taking -->
+        {% from 'details/macro.njk' import details %}
+        {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Taking insulin",
+        "HTML": "
+          <p></p>
+        "
+        }) }}
+        <!--taking -->
+        {% from 'details/macro.njk' import details %}
+        {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Types of insulin<",
+        "HTML": "
+          <p></p>
+        "
+        }) }}
+        </section>
+        <hr />
+      <section>
+        <!-- type 1 -->
+        {% from 'details/macro.njk' import details %}
+        {{ details({
+        "classes": "nhsuk-expander",
+        "text": "Insulin for type 1 diabetes",
+        "HTML": "
+            <p>Most people with type 1 diabetes take a long acting background insulin once or twice a day, and a separate rapid acting insulin before food. This is sometimes known as a basal bolus regime.</p>
+            <p>You’ll usually be offered insulin detemir (Levemir) twice a day as background insulin.<p>
+            <p>Some people take a longer acting background insulin called insulin glargine (Lantus) or insulin degludec (Tresiba) once a day. You might be advised to take insulin degludec if you get hypos at night.</p>
+            <p>You’ll usually also be offered a rapid acting insulin called either insulin aspart (NovoRapid or Fiasp), insulin lispro (Humalog) or insulin glulisine (Apidra) to take before meals.</p>
+            <p>You’ll need to calculate your dose for each meal, depending on the amount of carbohydrates you’ll be eating (carb counting). Carb counting and adjusting your insulin dose gives you flexibility in what you can eat.</p>
+            <p>If you use an insulin pump, you’ll only take a rapid acting insulin. Having small doses throughout the day means you do not need a separate background insulin.</p>
+          "
+          }) }}
+
+          <!-- type 2 -->
+          {% from 'details/macro.njk' import details %}
+          {{ details({
+          "classes": "nhsuk-expander",
+          "text": "Insulin for type 2 diabetes",
+          "HTML": "
+            <p></p>
+          "
+          }) }}
+
+          <!-- gestational -->
+          {% from 'details/macro.njk' import details %}
+          {{ details({
+          "classes": "nhsuk-expander",
+          "text": "Insulin for gestational diabetes",
+          "HTML": "
+            <p></p>
+          "
+          }) }}
+        </section>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

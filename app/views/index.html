@@ -1,0 +1,72 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK Insulin UX
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1>
+        NHS.UK Insulin UX
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Version 1</span>
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p class="nhsuk-lede-text">
+        This is the prototype with all journeys for the new Insulin pages.
+      </p>
+
+      <hr>
+
+      <h2>
+        Starting pages
+      </h2>
+
+      <ul>
+        <li><a href="">Type 1</a></li>
+        <li><a href="/insulin-hub">Type 2</a></li>
+        <li><a href="">Child</a></li>
+        <li><a href="">Gestational</a></li>
+      </ul>
+
+      <p>This is for UR reference</p>
+
+      <hr>
+
+
+
+
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}
