@@ -1,0 +1,149 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - edit the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "/level-one",
+      text: "Medicines A to Z"
+    }
+  ],
+  href: "/level-one/level-two/level-three",
+  text: "Insulin"
+}) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<main class="nhsuk-main-wrapper nhsuk-u-padding-top-0 nhsuk-u-padding-top-0" id="maincontent" lang="en-GB">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-u-reading-width">
+        <h1>Medicine A</h1>
+        <p class="nhsuk-lede-text">Brand names: Tubelips, Pester, Shobzipam, Ouchy Pen.</p>
+        <p class="nhsuk-lede-text">Find out how Medicine A treats blood sugar, diabetes, and how to take it.</p>
+      </div>
+      <article>
+        <div class="nhsuk-u-reading-width"></div>
+          <div class="nhsuk-u-reading-width">
+            <section>
+              <ul class="nhsuk-hub-key-links beta-hub-key-links">
+                  <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+                    <a href="medicine-a-about">
+                      About Medicine A
+                    </a>
+                  </li>
+                  <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+                    <a href="medicine-a-who-can-and-cannot-take">
+                      Who can and cannot take it
+                    </a>
+                  </li>
+                  <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+                    <a href="medicine-a-how-and-when-to-take">
+                      How and when to take it
+                    </a>
+                  </li>
+                  <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+                  <a class="app-related-nav__link" href="medicine-a-storing">
+                    Storing Medicine A
+                  </a>
+                  </li>
+                  <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+                    <a href="medicine-a-side-effects">
+                      Side effects
+                    </a>
+                  </li>
+                  <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+                        <a href="medicine-a-pregnancy-breastfeeding-and-fertility-while-taking">
+                      Pregnancy, breastfeeding and fertility
+                    </a>
+                  </li>
+                  <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+                        <a href="medicine-a-taking-with-other-medicines-and-herbal-supplements">
+                      Taking with other medicines and herbal supplements
+                    </a>
+                  </li>
+                  <li class="nhsuk-hub-key-links__list-item beta-hub-key-links__list-item">
+                        <a href="medicine-a-common-questions">
+                      Common questions
+                    </a>
+                  </li>
+              </ul>
+            </section>
+            <div class="nhsuk-u-margin-top-6 nhsuk-hub-after-key-links"></div>
+            <div>
+              <div class="nhsuk-u-margin-top-6 ">
+                <div class="beta-hub-related-links-title">
+                  <h2 class="nhsuk-heading-s ">Related conditions</h2>
+                </div>
+                <ul class="beta-hub-related-links">
+                  <li class="beta-hub-related-links__list-item">
+                    <a href="/conditions/epilepsy/">
+                      Type 1 diabetes
+                    </a>
+                  </li>
+                  <li class="beta-hub-related-links__list-item">
+                    <a href="/mental-health/conditions/generalised-anxiety-disorder/overview/">
+                      Type 2 diabetes
+                    </a>
+                  </li>
+                  <li class="beta-hub-related-links__list-item">
+                    <a href="/conditions/insomnia/">
+                      Gestational diabetes
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="nhsuk-u-margin-top-6 ">
+                <div class="beta-hub-related-links-title">
+                  <h2 class="nhsuk-heading-s ">Useful resources</h2>
+                </div>
+                <ul class="beta-hub-related-links">
+                  <li class="beta-hub-related-links__list-item">
+                    <a href="">Charity/org</a>
+                    <div>url.com/<div>
+                  </li>
+                  <li class="beta-hub-related-links__list-item">
+                    <a href="">Charity/org</a>
+                    <div>url.com<div>
+                  </li>
+                  <li class="beta-hub-related-links__list-item">
+                    <a href="">Charity/org</a>
+                    <div>url.com</div>
+                  </li>
+              </ul>
+            </div>
+            <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
+              Page last reviewed: 12 April 2022<br>
+              Next review due: 13 March 2024
+            </p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+
+{% endblock %}

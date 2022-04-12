@@ -1,0 +1,136 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - edit the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {% from 'breadcrumb/macro.njk' import breadcrumb %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/level-one",
+        text: "Level one"
+      },
+      {
+        href: "/level-one/level-two",
+        text: "Level two"
+      }
+    ],
+    href: "/level-one/level-two/level-three",
+    text: "Level three"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page heading -->
+      <h1>
+        About Medicine A
+      </h1>
+
+
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      <p class="nhsuk-lede-text">
+        Nullam elit enim, rutrum quis sem et, molestie condimentum ante. Suspendisse volutpat ac dolor eu scelerisque. Sed quis mollis diam, at vestibulum sapien. Quisque placerat a dolor in viverra. Duis odio tortor, tempus quis congue ac, lobortis in est. Aenean gravida in enim ultricies euismod. Sed consequat sit amet augue quis mollis. Sed iaculis nulla ligula, ac pretium turpis dapibus in. Nulla laoreet et nibh ut sodales. Donec sollicitudin pretium arcu, sed dignissim sapien cursus id.
+      </p>
+      <article>
+        <h2>Brief summary</h2>
+        <p> of what insulin is, how it works to keep blood glucose in range and help prevent complications of diabetes</p>
+        <h2>What conditions</h2>
+        <p>this type of insulin treats (eg type 1, type 2, gestational diabetes)</p>
+        <h2>Acting status</h2>
+        <p>Is it rapid acting, long acting, mixed etc and what this means (eg how quickly it starts working, how long it lasts for)</p>
+        <h2>Available on prescription</h2>
+        <h2>Formulations/how it comes</h2>
+        <p>pens, types/names/colours of pens. Does it also come in a form you can use in a pump (rapid acting only)</p>
+        <h2>Key facts</h2>
+        <p>5 to 6 bullet points, eg</p>
+        <ul>
+          <li>how quickly it works</li>
+          <li> how you take it</li>
+          <li>side effects</li>
+          <li>driving or alcohol if relevant</li>
+        </ul>
+        <p>Include free prescriptions: “If you have diabetes, you're entitled to free prescriptions for all of your medicines, not just your diabetes ones.""</p>
+      </article>
+
+      <aside class="nhsuk-grid-column">
+      <div id="sibling-nav" class="app-related-nav beta-hub-sibling-nav nhsuk-u-padding-top-5">
+        <h2 class="app-related-nav__heading nhsuk-u-padding-bottom-3">More in <a href="/medicines/diazepam/">Medicine A</a></h2>
+        <nav role="navigation" class="app-related-nav__nav-section">
+          <ul class="app-related-nav__list beta-hub-sibling-nav__list">
+            <li class="beta-hub-sibling-nav__item  beta-hub-sibling-nav--current">
+              About Medicine A
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-who-can-and-cannot-take">
+                Who can and cannot take it
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-how-and-when-to-take">
+                How and when to take it
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-storing">
+                Storing Medicine A
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-side-effects">
+                Side effects
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-pregnancy-breastfeeding-and-fertility-while-taking">
+                Pregnancy, breastfeeding and fertility
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="/medicine-a-taking-with-other-medicines-and-herbal-supplements">
+                Taking Medicine A with other medicines and herbal supplements
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+                  <a class="app-related-nav__link" href="medicine-a-common-questions">
+                Common questions
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
+      Page last reviewed: 12 April 2022<br>
+      Next review due: 13 March 2024
+    </p>
+      <!-- End of content -->
+
+    </div>
+
+  </div>
+{% endblock %}

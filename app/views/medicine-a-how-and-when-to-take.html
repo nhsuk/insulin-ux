@@ -1,0 +1,163 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - edit the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {% from 'breadcrumb/macro.njk' import breadcrumb %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/level-one",
+        text: "Level one"
+      },
+      {
+        href: "/level-one/level-two",
+        text: "Level two"
+      }
+    ],
+    href: "/level-one/level-two/level-three",
+    text: "Level three"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page heading -->
+      <h1>
+        How and when to take it Medicine A
+      </h1>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      <p class="nhsuk-lede-text">
+        Nullam elit enim, rutrum quis sem et, molestie condimentum ante. Suspendisse volutpat ac dolor eu scelerisque. Sed quis mollis diam, at vestibulum sapien. Quisque placerat a dolor in viverra. Duis odio tortor, tempus quis congue ac, lobortis in est. Aenean gravida in enim ultricies euismod. Sed consequat sit amet augue quis mollis. Sed iaculis nulla ligula, ac pretium turpis dapibus in. Nulla laoreet et nibh ut sodales. Donec sollicitudin pretium arcu, sed dignissim sapien cursus id.
+      </p>
+      <article>
+        <h2>Dosage</h2>
+
+        <p>Usual dose for each condition, or what dose is based on</p>
+        <h2>How often you take it</h2>
+        <h2>Acting status</h2>
+        <p>Link between dosage and food where relevant (eg rapid acting, short acting, mixed insulins)</p>
+        <p>Refer to carb counting if relevant (could link to Counting carbohydrates type 1 page)</p>
+        <h2>Changes to your dose</h2>
+        <p>How your dose might change, factors that affect dose, eg hormonal changes, pregnancy, seasonal changes, climate/travel, illness</p>
+        <p>Highlight importance of keeping dosage and treatment under review</p>
+        <h2>Checking blood glucose</h2>
+        <p>Advice on when users might need to check blood glucose, explain link between blood glucose and insulin dose</p>
+        <p>Importance of having blood glucose tests and/or sharing blood glucose data with your diabetes team to review dose (if relevant)</p>
+        <p>Advice on healthy blood glucose range</p>
+        <h3>Newly-diagnosed</h3>
+        <p>Could link to Newly diagnosed (type 1) which includes instructions for checking blood glucose</p>
+        <p>Include reference to blood glucose monitors</p>
+        <h2>How to take it</h2>
+        <p>When to take it (depending on type of insulin), eg how long before food, or once/twice a day, morning/evening</p>
+        <p>How to use a pen, injection technique, where to inject, rotating injection sites (could link to Newly diagnosed (type 1) which includes video of how to inject)</p>
+        <p>Changing needles, how to dispose of needles (sharps bin)</p>
+        <h3>Any common errors to avoid</h3>
+        <p>Advice on keeping pens separate and making sure to use the right one if they take 2 types of insulin</p>
+        <p>What to do if you have a problem with your pen</p>
+        <h2>Using an insulin pump (rapid acting insulins only)</h2>
+        <p>Brief info on what pumps are, benefits and eligibility. Can link to Insulin pumps (type 1) for more info.</p>
+        <p>How long to take it for</p>
+        <p>How long people will usually take it for (eg usually for life for type 1, usually only until baby is born for GD)</p>
+        <p>Importance of taking it to avoid complications from diabetes</p>
+        <p><b>Any warnings or advice about stopping (eg do not stop taking it without talking to your doctor)</b></p>
+        <p>If you forget to take it</p>
+        <p>What to do if you miss a dose (eg take it when you remember, or skip the missed dose)</p>
+        <p>Any extra advice/warnings about missed doses, eg advice about hypers</p>
+        {% from 'card/macro.njk' import card %}
+        {{ card({
+          "type": "urgent",
+          "heading": "If you take too much",
+          "descriptionHtml": "
+          <p>What to do if you take too much. Include advice (care cards) on when someone should get medical help, and whether this would be 111 or 999/A&E</p>
+          <p>Advice on hypos, recognising symptoms and how to treat them, when to get medical help</p>
+          "
+        }) }}
+
+
+
+
+      </article>
+
+      <aside class="nhsuk-grid-column">
+      <div id="sibling-nav" class="app-related-nav beta-hub-sibling-nav nhsuk-u-padding-top-5">
+        <h2 class="app-related-nav__heading nhsuk-u-padding-bottom-3">More in <a href="/medicines/diazepam/">Medicine A</a></h2>
+        <nav role="navigation" class="app-related-nav__nav-section">
+          <ul class="app-related-nav__list beta-hub-sibling-nav__list">
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-about">
+              About Medicine A
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__itemt">
+              <a class="app-related-nav__link" href="medicine-a-how-and-when-to-take">
+                Who can and cannot take it
+                </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item beta-hub-sibling-nav--current">
+                How and when to take it
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-storing">
+                Storing Medicine A
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-side-effects">
+                Side effects
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-pregnancy-breastfeeding-and-fertility-while-taking">
+                Pregnancy, breastfeeding and fertility
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="/medicine-a-taking-with-other-medicines-and-herbal-supplements">
+                Taking Medicine A with other medicines and herbal supplements
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+                  <a class="app-related-nav__link" href="medicine-a-common-questions">
+                Common questions
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
+      Page last reviewed: 12 April 2022<br>
+      Next review due: 13 March 2024
+    </p>
+      <!-- End of content -->
+
+    </div>
+
+  </div>
+{% endblock %}

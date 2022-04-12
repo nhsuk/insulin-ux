@@ -1,0 +1,126 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - edit the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Content page example - NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {% from 'breadcrumb/macro.njk' import breadcrumb %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/level-one",
+        text: "Level one"
+      },
+      {
+        href: "/level-one/level-two",
+        text: "Level two"
+      }
+    ],
+    href: "/level-one/level-two/level-three",
+    text: "Level three"
+  }) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page heading -->
+      <h1>
+        Taking Medicine A with other medicines and herbal supplements
+      </h1>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      <p class="nhsuk-lede-text">Morbi in consectetur lacus. Donec a vulputate velit, tincidunt iaculis urna. Aliquam fermentum, tortor a tempor vestibulum, orci sem fringilla libero, a mattis diam odio sit amet lectus. Nam eget est ligula. Morbi libero velit, gravida a quam quis, hendrerit aliquet orci. Curabitur egestas pulvinar ultrices. Praesent dignissim egestas semper. Nulla facilisi.</p>
+
+      <article>
+        <h2>Cautions with other medicines</h2>
+        <p>List of any medicines/groups of medicines that are contraindicated or which people should tell their doctor about</p>
+        <p>Can include information on eg taking it with painkillers, taking it with other diabetes medicines if relevant (with separate subheadings)</p>
+        <h2>Mixing it with herbal remedies and supplements</h2>
+        <p>Any cautions about specific herbal remedies, vitamins or supplements that affect insulin (or that affect blood sugar)
+        <p>Standard wording if appropriate: “It's not possible to say that other herbal remedies and supplements are safe to take with X. They're not tested in the same way as pharmacy or prescription medicines. They're generally not tested for the effect they can have on other medicines.”</p>
+        <p>Standard warning callout component: Tell your doctor or pharmacist if you're taking any other medicines, including herbal medicines, vitamins or supplements.</p>
+
+
+
+      </article>
+
+      <aside class="nhsuk-grid-column">
+      <div id="sibling-nav" class="app-related-nav beta-hub-sibling-nav nhsuk-u-padding-top-5">
+        <h2 class="app-related-nav__heading nhsuk-u-padding-bottom-3">More in <a href="/medicines/diazepam/">Medicine A</a></h2>
+        <nav role="navigation" class="app-related-nav__nav-section">
+          <ul class="app-related-nav__list beta-hub-sibling-nav__list">
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-about">
+              About Medicine A
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-who-can-and-cannot-take">
+                Who can and cannot take it
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-how-and-when-to-take">
+                How and when to take it
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-storing">
+                Storing Medicine A
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-side-effects">
+                Side effects
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+              <a class="app-related-nav__link" href="medicine-a-pregnancy-breastfeeding-and-fertility-while-taking">
+                Pregnancy, breastfeeding and fertility
+              </a>
+            </li>
+            <li class="beta-hub-sibling-nav__item  beta-hub-sibling-nav--current">
+                Taking Medicine A with other medicines and herbal supplements
+            </li>
+            <li class="beta-hub-sibling-nav__item">
+                  <a class="app-related-nav__link" href="medicine-a-common-questions">
+                Common questions
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-7 nhsuk-u-margin-bottom-0">
+      Page last reviewed: 12 April 2022<br>
+      Next review due: 13 March 2024
+    </p>
+      <!-- End of content -->
+
+    </div>
+
+  </div>
+{% endblock %}
