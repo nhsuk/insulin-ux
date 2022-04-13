@@ -14,21 +14,7 @@
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-  {% from 'breadcrumb/macro.njk' import breadcrumb %}
-  {{ breadcrumb({
-    items: [
-      {
-        href: "/level-one",
-        text: "Level one"
-      },
-      {
-        href: "/level-one/level-two",
-        text: "Level two"
-      }
-    ],
-    href: "/level-one/level-two/level-three",
-    text: "Level three"
-  }) }}
+  {% include "includes/breadcrumb-medicine-hub.html" %}
 {% endblock %}
 
 <!-- For adding a back link -->

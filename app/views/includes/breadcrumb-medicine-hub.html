@@ -1,0 +1,19 @@
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+{{ breadcrumb({
+  items: [
+    {
+      href: "javascript: void(0);",
+      text: "Home"
+    },
+    {
+      href: "javascript: void(0);",
+      text: "Medicines A-Z"
+    },
+    {
+      href: "/insulin-hub",
+      text: "Insulin"
+    }
+  ],
+  href: "/medicine-a",
+  text: "Medicine A"
+}) }}

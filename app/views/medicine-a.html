@@ -14,17 +14,7 @@
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
-{% from 'breadcrumb/macro.njk' import breadcrumb %}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/level-one",
-      text: "Medicines A to Z"
-    }
-  ],
-  href: "/level-one/level-two/level-three",
-  text: "Insulin"
-}) }}
+    {% include "includes/breadcrumb-medicine-hub.html" %}
 {% endblock %}
 
 <!-- For adding a back link -->
