@@ -23,7 +23,18 @@
     text-decoration: underline;
 }
 
+///////////////////////////////////////////
+// Added sibling nav app related nav styling that I can't find in the beta file as of 13/4/22
+///////////////////////////////////////////
 
+.app-related-nav__list {
+    list-style: none;
+    list-style-position: initial;
+    list-style-image: initial;
+    list-style-type: none;
+    margin-bottom: 16px;
+    padding-left: 0;
+}
 
 
 
