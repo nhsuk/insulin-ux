@@ -40,215 +40,132 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-<div class="nhsuk-grid-row">
-  <div class="nhsuk-grid-column-two-thirds">
-
+<section>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
       <!-- Change the page title here -->
       <h1>
         Insulin
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">for diabetes</span>
+        <!--<span class="nhsuk-caption-xl nhsuk-caption--bottom">for diabetes</span>-->
       </h1>
-
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
-      <p class="nhsuk-lede-text">Insulin is a hormone that helps your body use glucose (sugar) for energy.</p>
-      <p class="nhsuk-lede-text">It’s used as a medicine to treat diabetes, including <a href="">type 1 diabetes</a>, <a href="">type 2 diabetes</a> and <a href="">gestational diabetes</a>. It’s available on prescription.</p>
-
-      <!--<section>
-        <h2>Taking insulin</h2>
-          <p>You inject insulin using an insulin pen. This is a device that helps you inject safely and take the right dose. The type of pen you use depends on which insulin you’re prescribed.</p>
-          <p>Using an insulin pen does not usually hurt. The needles are very small, as you only inject a small amount just under your skin. When you’re first prescribed insulin you’ll be shown where to inject and how to use your pen.</p>
-          <p>Some people use an insulin pump instead of injections. This is a device you attach to your body that gives you small amounts of insulin throughout the day and night. Pumps are recommended for some children and adults with type 1 diabetes.</p>
-          <p>The type of insulin you take and the amount you need depends on your condition and how your body responds to insulin and carbohydrates.</p>
-          <p>Insulin can sometimes cause low blood sugar (hypoglycaemia, or hypos). You’ll be told how to recognise the symptoms and treat hypos.</p>
-      </section>
-
-      <section>
-        <h2>Types of insulin</h2>
-        <p>There are several different types of insulin, and different brand names. </p>
-        <p>Some start to work quickly and last a few hours. They’re taken before meals, to stop your blood glucose going too high when you eat carbohydrates. They’re known as rapid acting, short acting, mealtime or bolus insulin.</p>
-        <p>Others work more slowly and last for longer. They’re taken once or twice a day to give you the background insulin your body needs throughout the day. They’re known as long acting, intermediate acting, background or basal insulin. </p>
-        <p>You might need to take more than one type of insulin at different times to keep your blood glucose within a healthy range. Your doctor will advise on what insulin treatment is best for you.</p>
-
-      </section> -->
-      <section>
-        <!--taking -->
-        {% from 'details/macro.njk' import details %}
-        {{ details({
-        "classes": "nhsuk-expander",
-        "text": "Taking insulin",
-        "HTML": "
-        <p>You inject insulin using an insulin pen. This is a device that helps you inject safely and take the right dose. The type of pen you use depends on which insulin you’re prescribed.</p>
-        <p>Using an insulin pen does not usually hurt. The needles are very small, as you only inject a small amount just under your skin. When you’re first prescribed insulin you’ll be shown where to inject and how to use your pen.</p>
-        <p>Some people use an <a href=\"javascript: void(0)\">insulin pump</a> instead of injections. This is a device you attach to your body that gives you small amounts of insulin throughout the day and night. Pumps are recommended for some children and adults with type 1 diabetes.</p>
-        <p>The type of insulin you take and the amount you need depends on your condition and how your body responds to insulin and carbohydrates.</p>
-        <p>Insulin can sometimes cause low blood sugar (<a href=\"javascript: void(0)\">hypoglycaemia</a>, or hypos). You’ll be told how to recognise the symptoms and treat hypos.</p>
-        "
-        }) }}
-        <!--taking -->
-        {% from 'details/macro.njk' import details %}
-        {{ details({
-        "classes": "nhsuk-expander",
-        "text": "Types of insulin",
-        "HTML": "
-        <p>There are several different types of insulin, and different brand names. </p>
-        <p>Some start to work quickly and last a few hours. They’re taken before meals, to stop your blood glucose going too high when you eat carbohydrates. They’re known as rapid acting, short acting, mealtime or bolus insulin.</p>
-        <p>Others work more slowly and last for longer. They’re taken once or twice a day to give you the background insulin your body needs throughout the day. They’re known as long acting, intermediate acting, background or basal insulin. </p>
-        <p>You might need to take more than one type of insulin at different times to keep your blood glucose within a healthy range. Your doctor will advise on what insulin treatment is best for you.</p>
-        "
-        }) }}
-        </section>
+      <p class="nhsuk-lede-text">Find information about types of insulin and how to take it for type 1 diabetes, type 2 diabetes and gestational diabetes.</p>
         <hr />
-        <section>
-          <h2>Who takes insulin</h2>
-          <!-- type 1 -->
-          {% from 'details/macro.njk' import details %}
-          {{ details({
-          "classes": "nhsuk-expander",
-          "text": "Insulin for type 1 diabetes",
-          "HTML": "
-              <p>Most people with type 1 diabetes take a long acting background insulin once or twice a day, and a separate rapid acting insulin before food. This is sometimes known as a basal bolus regime.</p>
-              <p>You’ll usually be offered <a href=\"javascript: void(0)\">insulin detemir (Levemir)</a> twice a day as background insulin. </p>
-              <p>Some people take a longer acting background insulin called <a href=\"javascript: void(0)\">insulin glargine (Lantus)</a> or <a href=\"javascript: void(0)\">insulin degludec (Tresiba)</a> once a day. You might be advised to take insulin degludec if you get hypos at night.</p>
-              <p>You’ll usually also be offered a rapid acting insulin called either <a href=\"javascript: void(0)\">insulin aspart (NovoRapid or Fiasp)</a>, <a href=\"javascript: void(0)\">insulin lispro (Humalog)</a> or <a href=\"javascript: void(0)\">insulin glulisine (Apidra)</a> to take before meals.</p>
-              <p>You’ll need to calculate your dose for each meal, depending on the amount of carbohydrates you’ll be eating (carb counting). Carb counting and adjusting your insulin dose gives you flexibility in what you can eat.</p>
-              <p>If you use an <a href=\"javascript: void(0)\">insulin pump</a>, you’ll only take a rapid acting insulin. Having small doses throughout the day means you do not need a separate background insulin.</p>
-            "
-            }) }}
-
-          <!-- type 2 -->
-          {% from 'details/macro.njk' import details %}
-          {{ details({
-          "classes": "nhsuk-expander",
-          "text": "Insulin for type 2 diabetes",
-          "HTML": "
-            <p>If you need insulin to treat type 2 diabetes, you might only need to take a long acting or background insulin.</p>
-            <p>You’ll usually be offered a type of insulin called <a href=\"javascript: void(0)\">isophane insulin</a>, taken once or twice a day. This works for several hours.</p>
-            <p>If you often get hypos, or if you can only take insulin once a day, your doctor might suggest taking a type of background insulin that lasts for longer, called <a href=\"javascript: void(0)\">insulin detemir</a> or <a href=\"javascript: void(0)\">insulin glargine</a>.</p>
-            <p>Some people with type 2 diabetes also need to take a rapid acting or short acting insulin before meals, to stop their blood glucose from going too high when they eat carbohydrates.</p>
-            <p>You might take this either separately, or mixed with a long acting insulin so that you only take one combined medicine. This mixed insulin is also known as biphasic insulin.</p>
-          "
+      </div>
+  </div>
+</section>
+<section>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      {% from 'card/macro.njk' import card %}
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "#",
+            "clickable": "true",
+            "heading": "Insulin for type 1 diabetes",
+            "headingClasses": "nhsuk-heading-m",
+            "description": ""
           }) }}
-
-          <!-- gestational -->
-          {% from 'details/macro.njk' import details %}
-          {{ details({
-          "classes": "nhsuk-expander",
-          "text": "Insulin for gestational diabetes",
-          "HTML": "
-            <p>If you need insulin to treat gestational diabetes you’ll usually be offered a type of insulin called <a href=\"javascript: void(0)\">isophane insulin</a>, taken once or twice a day. This is usually the first choice of long acting insulin during pregnancy</p>
-            <p>If you also need to take a rapid acting insulin before meals, you’ll usually be offered either <a href=\"javascript: void(0)\">insulin aspart (NovoRapid)</a> or <a href=\"javascript: void(0)\">insulin lispro (Humalog)</a>.</p>
-            <p>Your blood glucose levels can increase as your pregnancy progresses, so it’s likely that you’ll need to change your dose. </p>
-            <p>Your doctor will advise you on the right insulin treatment for you and your baby.</p>
-            <p></p>
-          "
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "#",
+            "clickable": "true",
+            "heading": "Insulin for type 2 diabetes",
+            "headingClasses": "nhsuk-heading-m",
+            "description": ""
           }) }}
-        </section>
-        <hr />
-        <section>
-          <h2>Types of insulin available</h2>
-          <!-- rapid acting -->
-          {% from 'details/macro.njk' import details %}
-          {{ details({
-          "classes": "nhsuk-expander",
-          "text": "Rapid acting, short acting, mealtime or bolus insulin",
-          "HTML": "
-              <p>Rapid acting insulin starts to work quickly and is taken a few minutes before meals. It can also be used in an insulin pump.</p>
-              <ul>
-                <li><a href=\"javascript: void(0)\">Insulin aspart (NovoRapid or Fiasp)</a></li>
-                <li><a href=\"javascript: void(0)\">Insulin lispro (Humalog or Lyumjev)</a></li>
-                <li><a href=\"javascript: void(0)\">Insulin glulisine (Apidra)</a></li>
-              </ul>
-              <p>Short acting insulin (also known as soluble or neutral insulin) works slightly slower than rapid acting insulin, but is also taken before meals.</p>
-              <ul>
-                <li><a href=\"javascript: void(0)\">  Soluble or neutral insulin (Actrapid, Humulin S or Insuman Rapid)</a></li>
-              </ul>
-            "
-            }) }}
-
-            <!-- long acting -->
-            {% from 'details/macro.njk' import details %}
-            {{ details({
-            "classes": "nhsuk-expander",
-            "text": "Long acting, intermediate, background or basal insulin",
-            "HTML": "
-                <p>Intermediate insulin, or isophane insulin, works for several hours and is usually taken once or twice a day.</p>
-                <ul>
-                  <li><a href=\"javascript: void(0)\">Isophane insulin (Insuman Basal, Humulin I, Hypurin or Insulatard)</a></li>
-                </ul>
-                <p>Long acting insulin is similar to intermediate insulin, but lasts for longer and is usually taken once a day. It can reduce hypos compared to intermediate insulin. Insulin glargine and insulin degludec last longer than insulin detemir.</p>
-                <ul>
-                  <li><a href=\"javascript: void(0)\">Insulin detemir (Levemir)</a></li>
-                  <li><a href=\"javascript: void(0)\">Insulin glargine (Lantus, Toujeo, Semglee or Abasaglar)</a></li>
-                  <li><a href=\"javascript: void(0)\">Insulin degludec (Tresiba)</a></li>
-                </ul>
-              "
-              }) }}
-
-              <!-- mixed -->
-              {% from 'details/macro.njk' import details %}
-              {{ details({
-              "classes": "nhsuk-expander",
-              "text": "Mixed or biphasic insulin",
-              "HTML": "
-                  <p>Mixed insulin, also known as biphasic insulin, contains a rapid acting insulin and a long acting insulin mixed together as one medicine. It’s less flexible than taking separate types, but it means you need fewer injections. It’s taken before meals.</p>
-
-                  <ul>
-                    <li><a href=\"javascript: void(0)\">Biphasic insulin aspart (NovoMix)</a></li>
-                    <li><a href=\"javascript: void(0)\">Biphasic insulin lispro (Humalog Mix)</a></li>
-                    <li><a href=\"javascript: void(0)\">Biphasic isophane insulin (Insuman Comb, Humulin M3 or Hypurin)</a></li>
-                  </ul>
-
-                "
-                }) }}
-            </section>
-            <hr />
-            <section>
-              <div class="nhsuk-u-margin-top-6 nhsuk-hub-after-key-links"></div>
-              <div>
-                <div class="nhsuk-u-margin-top-6 ">
-                  <div class="beta-hub-related-links-title">
-                    <h2 class="nhsuk-heading-s ">Related conditions</h2>
-                  </div>
-                  <ul class="beta-hub-related-links">
-                    <li class="beta-hub-related-links__list-item">
-                      <a href="javascript: void(0)">
-                        Type 1 diabetes
-                      </a>
-                    </li>
-                    <li class="beta-hub-related-links__list-item">
-                      <a href="javascript: void(0)">
-                        Type 2 diabetes
-                      </a>
-                    </li>
-                    <li class="beta-hub-related-links__list-item">
-                      <a href="javascript: void(0)">
-                        Gestational diabetes
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="nhsuk-u-margin-top-6 ">
-                  <div class="beta-hub-related-links-title">
-                    <h2 class="nhsuk-heading-s ">Useful resources</h2>
-                  </div>
-                  <ul class="beta-hub-related-links">
-                    <li class="beta-hub-related-links__list-item">
-                      <a href="javascript: void(0)">Diabetes UK</a>
-                      <div>https://www.diabetes.org.uk<div>
-                    </li>
-                    <li class="beta-hub-related-links__list-item">
-                      <a href="javascript: void(0)">Charity/org</a>
-                      <div>url.com</div>
-                    </li>
-                </ul>
-              </div>
-            </section>
-
-
-      <!-- End of content -->
-
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+          {{ card({
+            "href": "#",
+            "clickable": "true",
+            "heading": "Insulin for gestational diabetes",
+            "headingClasses": "nhsuk-heading-m",
+            "description": ""
+          }) }}
+        </li>
+      </ul>
     </div>
   </div>
+</section>
+<hr />
+<section>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <h2>Types of insulin available</h2>
+        <!-- rapid acting -->
+        {% from 'card/macro.njk' import card %}
+
+          <ul class="nhsuk-grid-row nhsuk-card-group">
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+              {{ card({
+                "href": "#",
+                "clickable": "true",
+                "heading": "Rapid and short acting insulin",
+                "headingClasses": "nhsuk-heading-m",
+                "description": "Includes insulin aspart, insulin lispro, insulin glulisine and soluble insulin"
+              }) }}
+            </li>
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+              {{ card({
+                "href": "#",
+                "clickable": "true",
+                "heading": "Long acting and intermediate insulin",
+                "headingClasses": "nhsuk-heading-m",
+                "description": "Includes insulin detemir, insulin glargine, insulin degludec and isophane insulin"
+              }) }}
+            </li>
+            <li class="nhsuk-grid-column-one-half nhsuk-card-group__item">
+              {{ card({
+                "href": "#",
+                "clickable": "true",
+                "heading": "Mixed insulin",
+                "headingClasses": "nhsuk-heading-m",
+                "description": "Includes biphasic insulin aspart, biphasic insulin lispro, biphasic isophane insulin"
+              }) }}
+            </li>
+          </ul>
+    </div>
+  </div>
+</section>
+<hr />
+<section>
+  <div class="nhsuk-u-margin-top-6 nhsuk-hub-after-key-links"></div>
+  <div>
+    <div class="nhsuk-u-margin-top-6 ">
+      <div class="beta-hub-related-links-title">
+        <h2 class="nhsuk-heading-s ">Related information</h2>
+      </div>
+      <ul class="beta-hub-related-links">
+        <li class="beta-hub-related-links__list-item">
+          <a href="javascript: void(0)">
+            Type 1 diabetes
+          </a>
+        </li>
+        <li class="beta-hub-related-links__list-item">
+          <a href="javascript: void(0)">
+            Type 2 diabetes
+          </a>
+        </li>
+        <li class="beta-hub-related-links__list-item">
+          <a href="javascript: void(0)">
+            Gestational diabetes
+          </a>
+        </li>
+        <li class="beta-hub-related-links__list-item">
+          <a href="javascript: void(0)">Diabetes UK: charity</a>
+          <div>https://www.diabetes.org.uk<div>
+        </li>
+        <li class="beta-hub-related-links__list-item">
+          <a href="javascript: void(0)">JDRF: charity</a>
+          <div>https://jdrf.org.uk/</div>
+        </li>
+    </ul>
+  </div>
+</section>
+<!-- End of content -->
 {% endblock %}
