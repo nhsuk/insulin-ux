@@ -1,0 +1,149 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK Insulin UX
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Medicines A to z"
+    },
+    {
+      href: "/",
+      text: "Insulin"
+    }
+  ],
+  href: "/",
+  text: "Insulin for type 1 diabetes"
+}) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<section>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- Change the page title here -->
+      <h1>
+        Insulin for type 1 diabetes
+        <!--<span class="nhsuk-caption-xl nhsuk-caption--bottom">for diabetes</span>-->
+      </h1>
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p class="nhsuk-lede-text">Insulin is a medicine that helps your body use glucose (sugar) for energy.</p>
+      <p class="nhsuk-lede-text">If you have type 1 diabetes, your body cannot produce insulin. You'll need to be prescribed insulin to stop your blood glucose from getting too high.</p>
+      <hr />
+    </div>
+  </div>
+</section>
+<section>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2>How you take insulin</h2>
+      <p>You inject insulin using an insulin pen. This is a device that helps you inject safely and take the right dose.</p>
+      <p>Some people use an <a href="javascript: void(0)">insulin pump</a> instead of a pen. This is a device you attach to your body that gives you small amounts of insulin throughout the day and night.</p>
+      <p>When you're first prescribed insulin you'll be shown how to use your pen or your pump.</p>
+      <p>Read about <a href="javascript: void(0)">things to help if you’re newly diagnosed</a>, including managing blood glucose and how to inject insulin.</p>
+    </div>
+  </div>
+</section>
+<hr />
+<section>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h2>Types of insulin for type 1 diabetes</h2>
+      <p>Most people with type 1 diabetes take both:</p>
+      <ul>
+        <li>a long acting insulin (also called background or basal insulin) once or twice a day</li>
+        <li>a rapid acting insulin (also called mealtime or bolus insulin) before meals</li>
+      </ul>
+      <p>This combination is sometimes known as a basal bolus regime.</p>
+      <p>You'll need to calculate your rapid acting insulin dose for each meal, depending on the amount of carbohydrates you'll be eating (carb counting).</p>
+      <p>If you use an insulin pump, you'll only need rapid acting insulin. Your pump will give you small doses throughout the day so you do not need to take a long acting insulin.</p>
+      <p>Your doctor or care team will recommend the insulin treatment they think is best for you. The type of insulin you take and your dose may change over time.</p>
+      <h3>Long acting insulin</h3>
+      <p>Your doctor will usually recommend taking <a href="javascript: void(0)">insulin detemir (Levemir)</a> twice a day.</p>
+      <p>If you cannot take insulin detemir or you prefer to have fewer injections, your doctor may recommend <a href="javascript: void(0)">insulin glargine (Lantus)</a> once a day.</p>
+      <p>If you get low blood sugar (hypoglycaemia, or hypos) at night, or you need help from a carer to take injections, your doctor might recommend a type of insulin that lasts for longer, called <a href="javascript: void(0)">insulin degludec (Tresiba)</a>. It's taken once a day.</p>
+
+      <h3>Rapid acting insulin</h3>
+      <p>Your doctor will usually recommend either:</p>
+      <ul>
+        <li><a href="javascript: void(0)">insulin aspart (NovoRapid or Fiasp)</a></li>
+        <li><a href="javascript: void(0)">insulin lispro (Humalog)</a></li>
+        <li><a href="javascript: void(0)">insulin glulisine (Apidra)</a></li>
+      </ul>
+      <p>You'll need to take this around 10 to 20 minutes before each meal.</p>
+      <p>Insulin aspart works more quickly than insulin lispro or insulin glulisine so you can leave a shorter gap before eating.</p>
+      {% from 'inset-text/macro.njk' import insetText %}
+
+      {{ insetText({
+        "HTML": "<p><a href=\"javascript: void(0)\">Find out more about types of insulin and how to take it</a></p>"
+      }) }}
+  </div>
+  </div>
+</section>
+<hr />
+
+<section>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <aside class="nhsuk-grid-column">
+        <div id="sibling-nav" class="app-related-nav beta-hub-sibling-nav nhsuk-u-padding-top-5">
+          <h2 class="app-related-nav__heading nhsuk-u-padding-bottom-3">More in <a href="/insulin-hub">Insulin</a></h2>
+            <nav role="navigation" class="app-related-nav__nav-section">
+              <ul class="app-related-nav__list beta-hub-sibling-nav__list">
+                <li class="beta-hub-sibling-nav__item">
+                  <a class="app-related-nav__link" href="javascript: void(0)">
+                  About insulin
+                  </a>
+                </li>
+                <li class="beta-hub-sibling-nav__item">
+                  <a class="app-related-nav__link" href="javascript: void(0)">
+                    Long acting (background or basal) insulin
+                  </a>
+                </li>
+                <li class="beta-hub-sibling-nav__item">
+                  <a class="app-related-nav__link" href="javascript: void(0)">
+                    Rapid acting (mealtime or bolus) insulin
+                  </a>
+                </li>
+                <li class="beta-hub-sibling-nav__item">
+                  <a class="app-related-nav__link" href="javascript: void(0)">
+                    Mixed (biphasic) insulin
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </div>
+</section>
+<!-- End of content -->
+{% endblock %}
