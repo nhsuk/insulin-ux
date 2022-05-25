@@ -1,0 +1,22 @@
+{% set arr = [
+  { title: "Insulin for type 1 diabetes", id: 1, url: "/insulin-for-type-1-diabetes" },
+  { title: "Insulin for type 2 diabetes", id: 2,  url: "/insulin-for-type-2-diabetes" },
+  { title: "Insulin for gestational diabetes", id: 3,  url: "/insulin-for-gestational-diabetes" },
+  { title: "Long acting (background or basal) insulin", id: 4,  url: "/long-acting-insulin" },
+  { title: "Rapid acting (mealtime or bolus) insulin", id: 5,  url: "/rapid-acting-insulin" },
+  { title: "Mixed (biphasic) insulin", id: 6,  url: "/mixed-insulin" }
+  ] %}
+<aside class="nhsuk-grid-column">
+  <div id="sibling-nav" class="app-related-nav beta-hub-sibling-nav nhsuk-u-padding-top-5">
+    <h2 class="app-related-nav__heading nhsuk-u-padding-bottom-3">More in <a href="/insulin-hub">{{ topic_title }}</a></h2>
+      <nav role="navigation" class="app-related-nav__nav-section">
+        <ul class="app-related-nav__list beta-hub-sibling-nav__list">
+          {% for item in arr %}
+          <li class="beta-hub-sibling-nav__item {% if page_link == item.title %} beta-hub-sibling-nav--current {% endif %}">{% if page_link == item.title %}{% else %}<a href="{{ item.url }}">{% endif %}{{ item.title }}{% if page_link == item.title %}{% else %}</a>{% endif %}</li>
+          {% else %}
+          <li class="beta-hub-sibling-nav__item">Nothing to see here</li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </aside>

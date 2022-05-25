@@ -1,0 +1,122 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+{% set topic_title = "Insulin" %}
+{% set page_link = "Insulin for type 2 diabetes" %}
+<!--
+  In /views/layout.html you can:
+    - change the header and footer
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK Insulin UX
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% from 'breadcrumb/macro.njk' import breadcrumb %}
+
+{{ breadcrumb({
+  items: [
+    {
+      href: "/",
+      text: "Medicines A to z"
+    },
+    {
+      href: "/",
+      text: "Insulin"
+    }
+  ],
+  href: "/",
+  text: "Insulin for type 2 diabetes"
+}) }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <section>
+
+      <!-- Change the page title here -->
+      <h1>
+        Insulin for type 2 diabetes
+        <!--<span class="nhsuk-caption-xl nhsuk-caption--bottom">for diabetes</span>-->
+      </h1>
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p class="nhsuk-lede-text">Insulin is a medicine that helps your body use glucose (sugar) for energy.</p>
+      <p>You'll need to be prescribed insulin for type 2 diabetes if <a href="javascript: void(0)">other diabetes medicines</a> no longer work well enough to keep your blood glucose within a healthy range.</p>
+      <p>Sometimes you may need insulin for a short time, such as if you're pregnant, if you're ill, or to bring your blood sugar level down when you're first diagnosed. </p>
+      <p>Insulin reduces the chances of getting the symptoms of high blood glucose (hyperglycaemia) and serious long-term problems that can damage your heart, kidneys, eyes and nerves.</p>
+      <hr />
+  </section>
+  <section>
+      <h2>How you take insulin</h2>
+      <p>You inject insulin using an insulin pen. This is a device that helps you inject safely and take the right dose.</p>
+      <p>Using an insulin pen does not usually hurt. The needles are very small, as you only inject a small amount just under your skin.</p>
+      <p>Your diabetes nurse will show you where to inject and how to use your pen.</p>
+  </section>
+  <hr />
+  <section>
+      <h2>Types of insulin for type 2 diabetes</h2>
+      <p>People who need insulin for type 2 diabetes usually take either:</p>
+      <ul>
+        <li>a long acting or intermediate insulin once or twice a day</li>
+        <li>a long acting or intermediate insulin once or twice a day, and a separate rapid acting or short acting insulin before meals</li>
+        <li>a mixed insulin, containing both intermediate and rapid acting or short acting insulin, 1 to 3 times a day before meals</li>
+      </ul>
+      <p>This combination is sometimes known as a basal bolus regime.</p>
+      <p>You'll need to calculate your rapid acting insulin dose for each meal, depending on the amount of carbohydrates you'll be eating (carb counting).</p>
+      <p>Your doctor or care team will recommend the insulin treatment they think is best for you. The type of insulin you take and your dose may change over time.</p>
+
+      <h3>Long acting or intermediate insulin</h3>
+      <p>Your doctor will usually recommend <a href="javascript: void(0)">isophane insulin (Insuman Basal</a>, <a href="javascript: void(0)">Humulin I</a>, <a href="javascript: void(0)">Hypurin</a> or <a href="javascript: void(0)">Insulatard)</a>, taken once or twice a day.</p>
+      <p>If you often get low blood sugar (hypoglycaemia, or hypos), or you need help from a carer to take injections, your doctor might recommend a type of insulin that lasts for longer, taken once a day:</p>
+      <ul>
+        <li><a href="javascript: void(0)">insulin detemir (Levemir)</a></li>
+        <li><a href="javascript: void(0)">insulin glargine (Lantus, Toujeo, Semglee or Abasaglar)</a></li>
+      </ul>
+
+      <h3>Rapid acting or short acting insulin</h3>
+      <p>If a long acting or intermediate insulin does not lower your blood glucose enough on its own, you'll also need to take a rapid acting or short acting insulin before meals.</p>
+      <p>Your doctor will recommend either:</p>
+      <ul>
+        <li><a href="javascript: void(0)">insulin aspart (NovoRapid or Fiasp)</a></li>
+        <li><a href="javascript: void(0)">insulin lispro (Humalog or Lyumjev)</a></li>
+        <li><a href="javascript: void(0)">insulin glulisine (Apidra)</a></li>
+        <li><a href="javascript: void(0)">soluble insulin (Actrapid, Humulin S or Insuman Rapid)</a></li>
+      </ul>
+
+      <h3>Mixed insulin</h3>
+      <p>If you need both intermediate and rapid acting insulin, your doctor might recommend a mixed insulin instead of separate injections. This is also known as biphasic insulin.</p>
+      <p>You'll take this before meals, 1 to 3 times a day. It's less flexible than taking separate types, but it means you need fewer injections.</p>
+      <p>Your doctor will recommend either:</p>
+      <ul>
+        <li><a href="javascript: void(0)">biphasic insulin aspart (NovoMix)</a></li>
+        <li><a href="javascript: void(0)">biphasic insulin lispro (Humalog Mix)</a></li>
+        <li><a href="javascript: void(0)">biphasic isophane insulin (Insuman Comb, Humulin M3 or Hypurin)</a></li>
+      </ul>
+    </section>
+    <hr />
+
+    <section>
+      {% include "includes/sub-topic-nav.html" %}
+    </section>
+</div>
+</div>
+<!-- End of content -->
+{% endblock %}

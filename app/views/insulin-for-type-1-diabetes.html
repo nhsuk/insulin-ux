@@ -4,6 +4,8 @@
 
 <!-- Extends the layout from /views/layout.html -->
 {% extends 'layout.html' %}
+{% set topic_title = "Insulin" %}
+{% set page_link = "Insulin for type 1 diabetes" %}
 <!--
   In /views/layout.html you can:
     - change the header and footer
@@ -44,9 +46,10 @@
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-<section>
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <section>
+
       <!-- Change the page title here -->
       <h1>
         Insulin for type 1 diabetes
@@ -58,24 +61,16 @@
       <p class="nhsuk-lede-text">Insulin is a medicine that helps your body use glucose (sugar) for energy.</p>
       <p class="nhsuk-lede-text">If you have type 1 diabetes, your body cannot produce insulin. You'll need to be prescribed insulin to stop your blood glucose from getting too high.</p>
       <hr />
-    </div>
-  </div>
-</section>
-<section>
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+  </section>
+  <section>
       <h2>How you take insulin</h2>
       <p>You inject insulin using an insulin pen. This is a device that helps you inject safely and take the right dose.</p>
       <p>Some people use an <a href="javascript: void(0)">insulin pump</a> instead of a pen. This is a device you attach to your body that gives you small amounts of insulin throughout the day and night.</p>
       <p>When you're first prescribed insulin you'll be shown how to use your pen or your pump.</p>
       <p>Read about <a href="javascript: void(0)">things to help if you’re newly diagnosed</a>, including managing blood glucose and how to inject insulin.</p>
-    </div>
-  </div>
-</section>
-<hr />
-<section>
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
+  </section>
+  <hr />
+  <section>
       <h2>Types of insulin for type 1 diabetes</h2>
       <p>Most people with type 1 diabetes take both:</p>
       <ul>
@@ -105,45 +100,15 @@
       {{ insetText({
         "HTML": "<p><a href=\"javascript: void(0)\">Find out more about types of insulin and how to take it</a></p>"
       }) }}
-  </div>
-  </div>
-</section>
-<hr />
+    </section>
+    <hr />
 
-<section>
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-      <aside class="nhsuk-grid-column">
-        <div id="sibling-nav" class="app-related-nav beta-hub-sibling-nav nhsuk-u-padding-top-5">
-          <h2 class="app-related-nav__heading nhsuk-u-padding-bottom-3">More in <a href="/insulin-hub">Insulin</a></h2>
-            <nav role="navigation" class="app-related-nav__nav-section">
-              <ul class="app-related-nav__list beta-hub-sibling-nav__list">
-                <li class="beta-hub-sibling-nav__item">
-                  <a class="app-related-nav__link" href="javascript: void(0)">
-                  About insulin
-                  </a>
-                </li>
-                <li class="beta-hub-sibling-nav__item">
-                  <a class="app-related-nav__link" href="javascript: void(0)">
-                    Long acting (background or basal) insulin
-                  </a>
-                </li>
-                <li class="beta-hub-sibling-nav__item">
-                  <a class="app-related-nav__link" href="javascript: void(0)">
-                    Rapid acting (mealtime or bolus) insulin
-                  </a>
-                </li>
-                <li class="beta-hub-sibling-nav__item">
-                  <a class="app-related-nav__link" href="javascript: void(0)">
-                    Mixed (biphasic) insulin
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </aside>
-      </div>
-    </div>
-</section>
+    <section>
+
+      {% include "includes/sub-topic-nav.html" %}
+
+    </section>
+  </div>
+</div>
 <!-- End of content -->
 {% endblock %}
