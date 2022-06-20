@@ -32,7 +32,7 @@
     }
   ],
   href: "",
-  text: "Insulin (categories)"
+  text: "Insulin (meds)"
 }) }}
 {% endblock %}
 
@@ -49,7 +49,7 @@
     <section>
       <!-- Change the page title here -->
       <h1>
-        Insulin v1 (with categories)
+        Insulin v2 (with 11 medicines)
         <!--<span class="nhsuk-caption-xl nhsuk-caption--bottom">for diabetes</span>-->
       </h1>
       <!-- Add your content here -->
@@ -64,6 +64,57 @@
   <div class="nhsuk-grid-column-full">
     <section>
 
+
+      <ul class="nhsuk-grid-row nhsuk-card-group">
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item beta-hub-main-topic">
+          <div class="nhsuk-card nhsuk-card--clickable ">
+            <div class="nhsuk-card__content beta-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/insulin-for-type-1-diabetes">
+                  Insulin for type 1 diabetes
+                </a>
+              </h2>
+              <div class="nhsuk-card__description"><p data-block-key="qwcyg">About insulin for Type 1 blah blah</p></div>
+              <div class="beta-hub-arrow">
+                <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""></circle><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"></path><path data-name="Path" d="M11.667 9.229L15.438 13"></path></g></svg>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item beta-hub-main-topic">
+          <div class="nhsuk-card nhsuk-card--clickable ">
+            <div class="nhsuk-card__content beta-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/insulin-for-type-2-diabetes">
+                  Insulin for type 2 diabetes
+                </a>
+              </h2>
+              <div class="nhsuk-card__description"><p data-block-key="qwcyg">About insulin treatments for blah blah and blah</p></div>
+              <div class="beta-hub-arrow">
+                <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""></circle><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"></path><path data-name="Path" d="M11.667 9.229L15.438 13"></path></g></svg>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nhsuk-grid-column-one-third nhsuk-card-group__item beta-hub-main-topic">
+          <div class="nhsuk-card nhsuk-card--clickable ">
+            <div class="nhsuk-card__content beta-card__content">
+              <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                <a class="nhsuk-card__link" href="/insulin-for-gestational-diabetes">
+                  Insulin for gestational diabetes
+                </a>
+              </h2>
+              <div class="nhsuk-card__description"><p data-block-key="qwcyg">About treating blah blah and blah</p></div>
+              <div class="beta-hub-arrow">
+                <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""></circle><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"></path><path data-name="Path" d="M11.667 9.229L15.438 13"></path></g></svg>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+  <!--
+      <hr />
       {% from 'card/macro.njk' import card %}
       <ul class="nhsuk-grid-row nhsuk-card-group">
         <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
@@ -93,59 +144,143 @@
             "description": ""
           }) }}
         </li>
-      </ul>
+      </ul> -->
 </section>
-<hr />
+
 <section>
       <!--<h2>Types of insulin available</h2>-->
         <!-- rapid acting -->
         {% from 'card/macro.njk' import card %}
           <ul class="nhsuk-grid-row nhsuk-card-group">
-            <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
-                <div class="nhsuk-card nhsuk-card--clickable ">
+            <li class="beta-hub-main-topic nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable beta-card--plain">
                   <div class="nhsuk-card__content beta-card__content">
                     <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                      <a class="nhsuk-card__link" href="/rapid-acting-insulin">
-                        Rapid and short acting insulin
+                      <a class="nhsuk-card__link" href="javascript: void(0)">
+                        Insulin aspart
                       </a>
                     </h2>
-                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Includes insulin aspart, insulin lispro, insulin glulisine and soluble insulin</p></div>
-                    <div class="beta-hub-arrow">
-                      <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""></circle><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"></path><path data-name="Path" d="M11.667 9.229L15.438 13"></path></g></svg>
-                    </div>
-
+                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Rapid acting insulin. Brands: NovoRapid, Fiasp</p></div>
                   </div>
                 </div>
             </li>
-            <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
-                <div class="nhsuk-card nhsuk-card--clickable ">
+            <li class="beta-hub-main-topic nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable beta-card--plain">
                   <div class="nhsuk-card__content beta-card__content">
                     <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                      <a class="nhsuk-card__link" href="/long-acting-insulin">
-                        Long acting and intermediate insulin
+                      <a class="nhsuk-card__link" href="javascript: void(0)">
+                        Insulin lispro
                       </a>
                     </h2>
-                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Includes insulin detemir, insulin glargine, insulin degludec and isophane insulin</p></div>
-                    <div class="beta-hub-arrow">
-                      <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""></circle><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"></path><path data-name="Path" d="M11.667 9.229L15.438 13"></path></g></svg>
-                    </div>
-
+                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Rapid acting insulin. Brands: Humalog, Lyumjev</p></div>
                   </div>
                 </div>
             </li>
-            <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
-                <div class="nhsuk-card nhsuk-card--clickable ">
+            <li class="beta-hub-main-topic nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable beta-card--plain">
                   <div class="nhsuk-card__content beta-card__content">
                     <h2 class="nhsuk-card__heading nhsuk-heading-m">
-                      <a class="nhsuk-card__link" href="/mixed-insulin">
-                        Mixed insulin
+                      <a class="nhsuk-card__link" href="javascript: void(0)">
+                        Insulin glulisine
                       </a>
                     </h2>
-                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Includes biphasic insulin aspart, biphasic insulin lispro, biphasic isophane insulin</p></div>
-                    <div class="beta-hub-arrow">
-                      <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""></circle><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"></path><path data-name="Path" d="M11.667 9.229L15.438 13"></path></g></svg>
-                    </div>
-
+                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Rapid acting insulin. Brand: Apidra</p></div>
+                  </div>
+                </div>
+            </li>
+            <li class="beta-hub-main-topic nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable beta-card--plain">
+                  <div class="nhsuk-card__content beta-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                      <a class="nhsuk-card__link" href="javascript: void(0)">
+                        Soluble insulin
+                      </a>
+                    </h2>
+                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Short acting insulin. Brands: Actrapid, Humulin S, Insuman Infusat, Insuman Rapid</p></div>
+                  </div>
+                </div>
+            </li>
+            <li class="beta-hub-main-topic nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable beta-card--plain">
+                  <div class="nhsuk-card__content beta-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                      <a class="nhsuk-card__link" href="javascript: void(0)">
+                        Isophane insulin
+                      </a>
+                    </h2>
+                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Intermediate insulin. Brands: Insuman Basal, Humulin I, Hypurin, Insulatard</p></div>
+                  </div>
+                </div>
+            </li>
+            <li class="beta-hub-main-topic nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable beta-card--plain">
+                  <div class="nhsuk-card__content beta-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                      <a class="nhsuk-card__link" href="javascript: void(0)">
+                        Insulin detemir
+                      </a>
+                    </h2>
+                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Long acting insulin. Brand: Levemir</p></div>
+                  </div>
+                </div>
+            </li>
+            <li class="beta-hub-main-topic nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable beta-card--plain">
+                  <div class="nhsuk-card__content beta-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                      <a class="nhsuk-card__link" href="javascript: void(0)">
+                        Insulin glargine
+                      </a>
+                    </h2>
+                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Long acting insulin. Brands: Lantus, Toujeo, Semglee, Abasaglar</p></div>
+                  </div>
+                </div>
+            </li>
+            <li class="beta-hub-main-topic nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable beta-card--plain">
+                  <div class="nhsuk-card__content beta-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                      <a class="nhsuk-card__link" href="javascript: void(0)">
+                        Insulin degludec
+                      </a>
+                    </h2>
+                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Long acting insulin. Brand: Tresiba</p></div>
+                  </div>
+                </div>
+            </li>
+            <li class="beta-hub-main-topic nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable beta-card--plain">
+                  <div class="nhsuk-card__content beta-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                      <a class="nhsuk-card__link" href="javascript: void(0)">
+                        Biphasic insulin aspart
+                      </a>
+                    </h2>
+                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Mixed insulin. Brand: Novomix</p></div>
+                  </div>
+                </div>
+            </li>
+            <li class="beta-hub-main-topic nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable beta-card--plain">
+                  <div class="nhsuk-card__content beta-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                      <a class="nhsuk-card__link" href="javascript: void(0)">
+                        Biphasic insulin lispro
+                      </a>
+                    </h2>
+                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Mixed insulin. Brand: Humalog Mix</p></div>
+                  </div>
+                </div>
+            </li>
+            <li class="beta-hub-main-topic nhsuk-grid-column-one-third nhsuk-card-group__item">
+                <div class="nhsuk-card nhsuk-card--clickable beta-card--plain">
+                  <div class="nhsuk-card__content beta-card__content">
+                    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                      <a class="nhsuk-card__link" href="javascript: void(0)">
+                        Biphasic isophane insulin
+                      </a>
+                    </h2>
+                    <div class="nhsuk-card__description"><p data-block-key="kxegl">Mixed insulin. Brands: Insuman Comb, Humulin M3, Hypurin</p></div>
                   </div>
                 </div>
             </li>
